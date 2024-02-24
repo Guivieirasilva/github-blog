@@ -19,6 +19,9 @@ export default {
       backgroundImage: {
         code: 'url(/cover.png)',
       },
+      screens: {
+        md: { max: '767px' },
+      },
     },
     fontFamily: {
       sans: ['"Nunito"', 'sans-serif'],
