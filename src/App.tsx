@@ -1,7 +1,13 @@
+import { Outlet } from 'react-router-dom'
+import Background from './styles/Background'
+
 export function App() {
   return (
-    <div className="bg-base-background">
-      <h1 className="text-2xl font-bold">Hello world!</h1>
+    <div className="relative">
+      <Background />
+      <div className="relative z-10 flex items-center justify-center w-screen mt-48 ">
+        <Outlet />
+      </div>
     </div>
   )
 }
