@@ -21,6 +21,7 @@ export default {
       },
       screens: {
         md: { max: '767px' },
+        xs: { max: '457px' },
       },
     },
     fontFamily: {
