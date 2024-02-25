@@ -4,7 +4,7 @@ import {
   faUserGroup,
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import IconGithub from '../../../assets/icons/github.svg'
+import IconGithub from '../../../../assets/icons/github.svg'
 
 export function ProfileCard() {
   return (
@@ -34,14 +34,14 @@ export function ProfileCard() {
             perferendis eaque sequi cum.
           </p>
         </main>
-        <footer className="flex md:flex-col md:items-center gap-4 justify-between text-base-subtitle ">
+        <footer className="flex md:flex-col md:items-center gap-4 justify-between text-base-subtitle text-center">
           <div title="Github" className="flex gap-2 items-center">
             <img className="h-6 w-6 inline" src={IconGithub} alt="" />
             <span>GuivieiraSilva</span>
           </div>
           <div title="Empresa" className="flex gap-2 items-center">
             <FontAwesomeIcon icon={faBuilding} />
-            UpBase Consulthing Technology
+            UpBase Consulthing
           </div>
           <div title="Seguidores" className="flex gap-2 items-center">
             <FontAwesomeIcon icon={faUserGroup} />
