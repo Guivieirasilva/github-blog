@@ -5,7 +5,7 @@ export function App() {
   return (
     <div className="relative">
       <Background />
-      <div className="relative z-10 flex items-center justify-center w-screen mt-48 ">
+      <div className="relative z-10 mt-48 flex w-screen items-center justify-center ">
         <Outlet />
       </div>
     </div>
