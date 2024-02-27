@@ -10,8 +10,8 @@ import IconGithub from '../../../assets/icons/github.svg'
 
 export function HeaderPost() {
   return (
-    <div className="w-full flex flex-col  gap-4 p-10 md:p-6 bg-base-profile rounded-lg text-base-text">
-      <div className="flex w-full justify-between items-center text-blue">
+    <div className="flex w-full flex-col  gap-4 rounded-lg bg-base-profile p-10 text-base-text md:p-6">
+      <div className="flex w-full items-center justify-between text-blue">
         <NavLink to="/">
           {' '}
           <FontAwesomeIcon icon={faChevronLeft} /> VOLTAR
@@ -20,19 +20,19 @@ export function HeaderPost() {
           VER NO GITHUB <FontAwesomeIcon icon={faUpRightFromSquare} />{' '}
         </a>
       </div>
-      <h1 className="text-base-title text-4xl md:text-2xl mb-2">
+      <h1 className="mb-2 text-4xl text-base-title md:text-2xl">
         JavaScript data types and data structures
       </h1>
-      <div className="flex gap-10 md:gap-5 text-base-span text-left xs:flex-col">
-        <div title="Github" className="flex gap-2 items-start">
-          <img className="h-6 w-6 inline" src={IconGithub} alt="" />
+      <div className="flex gap-10 text-left text-base-span md:gap-5 xs:flex-col">
+        <div title="Github" className="flex items-start gap-2">
+          <img className="inline h-6 w-6" src={IconGithub} alt="" />
           <span>GuivieiraSilva</span>
         </div>
-        <div title="Publicado há" className="flex gap-2 items-center">
+        <div title="Publicado há" className="flex items-center gap-2">
           <FontAwesomeIcon icon={faCalendar} />
           <span>Há 1 dia</span>
         </div>
-        <div title="Comentários" className="flex gap-2 items-center">
+        <div title="Comentários" className="flex items-center gap-2">
           <FontAwesomeIcon icon={faComment} />
           <span>8 Comentários</span>
         </div>

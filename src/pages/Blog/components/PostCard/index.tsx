@@ -5,13 +5,13 @@ export function PostCard() {
   return (
     <div
       onClick={() => nagivate('posts/2')}
-      className="bg-base-post rounded-[10px] p-10 cursor-pointer"
+      className="cursor-pointer rounded-[10px] bg-base-post p-10"
     >
-      <header className="flex gap-1 mb-4 items-center justify-between">
-        <strong className="text-base-title text-xl">
+      <header className="mb-4 flex items-center justify-between gap-1">
+        <strong className="text-xl text-base-title">
           JavaScript data types and data structures
         </strong>
-        <span className="text-base-span  text-sm">Há 1 dia</span>
+        <span className="text-sm  text-base-span">Há 1 dia</span>
       </header>
       <article>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad beatae

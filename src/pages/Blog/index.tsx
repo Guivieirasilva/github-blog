@@ -3,21 +3,22 @@ import { ProfileCard } from './components/ProfileCard'
 
 export function Blog() {
   const POSTS = [1, 2, 3, 4, 5, 6]
+
   return (
-    <div className="flex flex-col gap-16 pb-40 items-center justify-center text-base-text ">
+    <div className="flex flex-col items-center justify-center gap-16 pb-40 text-base-text ">
       <ProfileCard />
-      <div className="w-4/5 md:w-[90%] flex flex-col items-center justify-center gap-2">
-        <div className="w-full flex justify-between px-1">
-          <span className="text-base-subtitle text-lg ">Publicações</span>
-          <span className="text-base-span text-sm ">9 Publicações</span>
+      <div className="flex w-4/5 flex-col items-center justify-center gap-2 md:w-[90%]">
+        <div className="flex w-full justify-between px-1">
+          <span className="text-lg text-base-subtitle ">Publicações</span>
+          <span className="text-sm text-base-span ">9 Publicações</span>
         </div>
         <input
-          className="w-full h-12 p-4 bg-base-input rounded-md text-base-text border border-base-border placeholder:text-base-label "
+          className="h-12 w-full rounded-md border border-base-border bg-base-input p-4 text-base-text placeholder:text-base-label "
           type="search"
           placeholder="Buscar Conteúdo"
         />
       </div>
-      <section className=" w-4/5 md:w-[90%] grid grid-cols-2 md:grid-cols-1 gap-8">
+      <section className=" grid w-4/5 grid-cols-2 gap-8 md:w-[90%] md:grid-cols-1">
         {POSTS.map((data, idx) => (
           <PostCard key={idx} />
         ))}

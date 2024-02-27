@@ -8,20 +8,20 @@ import IconGithub from '../../../../assets/icons/github.svg'
 
 export function ProfileCard() {
   return (
-    <section className="w-4/5 md:w-[90%] flex lg:flex-row md:flex-col md:items-center gap-4 p-10 md:p-6 bg-base-profile rounded-lg text-base-text">
+    <section className="flex w-4/5 gap-4 rounded-lg bg-base-profile p-10 text-base-text md:w-[90%] md:flex-col md:items-center md:p-6 lg:flex-row">
       <div className="flex items-center">
         <img
-          className="w-[148px] h-[148px] rounded-md"
+          className="h-[148px] w-[148px] rounded-md"
           src="https://github.com/Guivieirasilva.png"
           alt=""
         />{' '}
       </div>
-      <div className=" flex flex-col gap-4 flex-1 p-2">
-        <header className="flex md:flex-col md:gap-2 justify-between items-center">
-          <strong className="text-base-title text-2xl md:text-center ">
+      <div className=" flex flex-1 flex-col gap-4 p-2">
+        <header className="flex items-center justify-between md:flex-col md:gap-2">
+          <strong className="text-2xl text-base-title md:text-center ">
             Guilherme Vieira Silva
           </strong>
-          <a className="text-blue cursor-pointer">
+          <a className="cursor-pointer text-blue">
             GITHUB{' '}
             <FontAwesomeIcon className="ml-1" icon={faUpRightFromSquare} />
           </a>
@@ -34,16 +34,16 @@ export function ProfileCard() {
             perferendis eaque sequi cum.
           </p>
         </main>
-        <footer className="flex md:flex-col md:items-center gap-4 justify-between text-base-subtitle text-center">
-          <div title="Github" className="flex gap-2 items-center">
-            <img className="h-6 w-6 inline" src={IconGithub} alt="" />
+        <footer className="flex justify-between gap-4 text-center text-base-subtitle md:flex-col md:items-center">
+          <div title="Github" className="flex items-center gap-2">
+            <img className="inline h-6 w-6" src={IconGithub} alt="" />
             <span>GuivieiraSilva</span>
           </div>
-          <div title="Empresa" className="flex gap-2 items-center">
+          <div title="Empresa" className="flex items-center gap-2">
             <FontAwesomeIcon icon={faBuilding} />
             UpBase Consulthing
           </div>
-          <div title="Seguidores" className="flex gap-2 items-center">
+          <div title="Seguidores" className="flex items-center gap-2">
             <FontAwesomeIcon icon={faUserGroup} />
             32 Seguidores
           </div>

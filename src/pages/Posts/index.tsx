@@ -2,9 +2,9 @@ import { HeaderPost } from './components/HeaderPosts'
 
 export function Posts() {
   return (
-    <section className="w-4/5 md:w-[90%] flex flex-col items-center justify-center text-base-text gap-10">
+    <section className="flex w-4/5 flex-col items-center justify-center gap-10 text-base-text md:w-[90%]">
       <HeaderPost />
-      <div className="p-6 flex flex-col gap-6">
+      <div className="flex flex-col gap-6 p-6">
         <p>
           <strong>
             Programming languages all have built-in data structures, but these
