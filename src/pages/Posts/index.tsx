@@ -1,32 +1,32 @@
+import { useParams } from 'react-router-dom'
 import { HeaderPost } from './components/HeaderPosts'
+import { useContext } from 'react'
+import { IssuesContext } from '../../context/IssuesContext'
+import Markdown from 'react-markdown'
 
 export function Posts() {
-  return (
-    <section className="flex w-4/5 flex-col items-center justify-center gap-10 text-base-text md:w-[90%]">
-      <HeaderPost />
-      <div className="flex flex-col gap-6 p-6">
-        <p>
-          <strong>
-            Programming languages all have built-in data structures, but these
-            often differ from one language to another
-          </strong>
-          This article attempts to list the built-in data structures available
-          in JavaScript and what properties they have. These can be used to
-          build other data structures. Wherever possible, comparisons with other
-          languages are drawn.
-        </p>
-        <a className="text-blue underline-offset-1">Dynamic typing</a>
-        <p>
-          JavaScript is a loosely typed and dynamic language. Variables in
-          JavaScript are not directly associated with any particular value type,
-          and any variable can be assigned (and re-assigned) values of all
-          types:
-        </p>
-        <code className="bg-base-border" lang="javacript">
-          let foo = 42; // foo is now a number foo = ‘bar’; // foo is now a
-          string foo = true; // foo is now a boolean
-        </code>
-      </div>
-    </section>
-  )
+  const { postId } = useParams()
+  console.log(postId)
+
+  const { issues } = useContext(IssuesContext)
+
+  const currentIssue = issues.find((data) => String(data.id) === postId)
+
+  if (currentIssue) {
+    return (
+      <section className="flex w-4/5 flex-col items-center justify-center gap-10 text-base-text md:w-[90%]">
+        {/* Header Post */}
+        <HeaderPost
+          title={currentIssue.title}
+          comments={currentIssue.comments}
+          createdAt={currentIssue.created_at}
+          issueLink={currentIssue.html_url}
+        />
+        {/* Post */}
+        <div className="flex flex-col gap-6 rounded-md bg-base-post p-8 text-justify text-lg">
+          <Markdown>{currentIssue.body}</Markdown>
+        </div>
+      </section>
+    )
+  }
 }
