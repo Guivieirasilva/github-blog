@@ -1,13 +1,11 @@
 import { Outlet } from 'react-router-dom'
-import Background from './styles/Background'
+import { Header } from './components/Header'
 
 export function App() {
   return (
-    <div className="relative">
-      <Background />
-      <div className="relative z-10 mt-48 flex w-screen items-center justify-center ">
-        <Outlet />
-      </div>
+    <div className=" flex h-full w-full flex-col items-center justify-center bg-base-background">
+      <Header />
+      <Outlet />
     </div>
   )
 }
