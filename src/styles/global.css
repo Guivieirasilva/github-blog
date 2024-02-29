@@ -6,8 +6,13 @@ body {
   -webkit-font-smothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+
  * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
  }
+
+input:focus {
+  outline: 1px solid #3A536B;
+}
