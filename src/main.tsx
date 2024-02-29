@@ -5,6 +5,8 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { Blog } from './pages/Blog'
 import { Posts } from './pages/Posts'
 import './styles/global.css'
+import { IssuesProvider } from './context/IssuesContext/index.tsx'
+import { ProfileProvider } from './context/ProfileContext/index.tsx'
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ProfileProvider>
+      <IssuesProvider>
+        <RouterProvider router={router} />
+      </IssuesProvider>
+    </ProfileProvider>
   </React.StrictMode>,
 )
