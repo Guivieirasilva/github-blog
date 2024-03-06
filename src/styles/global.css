@@ -2,9 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+html, body {
   -webkit-font-smothing: antialiased;
   text-rendering: optimizeLegibility;
+  background: #071422;
 }
 
  * {
