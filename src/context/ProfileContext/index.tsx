@@ -35,11 +35,10 @@ export function ProfileProvider({ children }: ProfileProviderType) {
     try {
       const { data } = await api.get(`users/${NAME_USER}`)
       setUser(data)
-      console.log(user)
     } catch (err) {
       console.error(err)
     }
-  }, [NAME_USER, user])
+  }, [NAME_USER])
 
   useEffect(() => {
     fechtUser()
