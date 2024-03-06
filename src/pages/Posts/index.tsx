@@ -14,7 +14,7 @@ export function Posts() {
 
   if (currentIssue) {
     return (
-      <section className="flex w-4/5 flex-col items-center justify-center gap-10 text-base-text md:w-[90%]">
+      <section className="flex w-4/5 flex-col items-center justify-center gap-10 pb-32 text-base-text md:w-[90%]">
         {/* Header Post */}
         <HeaderPost
           title={currentIssue.title}
@@ -23,7 +23,7 @@ export function Posts() {
           issueLink={currentIssue.html_url}
         />
         {/* Post */}
-        <div className="flex flex-col gap-6 rounded-md bg-base-post p-8 text-justify text-lg">
+        <div className="flex flex-col gap-6 rounded-md p-8 text-justify text-lg">
           <Markdown>{currentIssue.body}</Markdown>
         </div>
       </section>
