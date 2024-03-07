@@ -1,13 +1,18 @@
+/* eslint-disable react/no-children-prop */
 import { useParams } from 'react-router-dom'
 import { HeaderPost } from './components/HeaderPosts'
-import { useContext } from 'react'
+import { useContext, CSSProperties } from 'react'
 import { IssuesContext } from '../../context/IssuesContext'
 import Markdown from 'react-markdown'
-
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import style from 'react-syntax-highlighter/dist/esm/styles/prism/dracula'
+// Defina o estilo diretamente como um objeto CSSProperties
+const customStyle: CSSProperties = {
+  backgroundColor: '#282a36',
+  color: '#f8f8f2',
+}
 export function Posts() {
   const { postId } = useParams()
-  console.log(postId)
-
   const { issues } = useContext(IssuesContext)
 
   const currentIssue = issues.find((data) => String(data.id) === postId)
@@ -23,8 +28,32 @@ export function Posts() {
           issueLink={currentIssue.html_url}
         />
         {/* Post */}
-        <div className="flex flex-col gap-6 rounded-md p-8 text-justify text-lg">
-          <Markdown>{currentIssue.body}</Markdown>
+        <div className="flex flex-col gap-6 rounded-md p-8 text-justify text-lg  md:w-[90%] md:p-2">
+          <Markdown
+            className="md:overflow-scroll md:text-sm"
+            children={currentIssue.body}
+            components={{
+              code({ node, className, children, ...props }) {
+                const match = /language-(\w+)/.exec(className || '')
+
+                if (!match) {
+                  return <code className={className} {...props} />
+                }
+
+                const meta = node?.data as string | undefined
+
+                return (
+                  <SyntaxHighlighter
+                    language={match[1]}
+                    wrapLines={!!meta}
+                    style={style}
+                    children={String(children).replace(/\s$/g, '')}
+                    {...props}
+                  />
+                )
+              },
+            }}
+          />
         </div>
       </section>
     )
