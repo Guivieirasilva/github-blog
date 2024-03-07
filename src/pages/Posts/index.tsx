@@ -1,16 +1,12 @@
 /* eslint-disable react/no-children-prop */
 import { useParams } from 'react-router-dom'
 import { HeaderPost } from './components/HeaderPosts'
-import { useContext, CSSProperties } from 'react'
+import { useContext } from 'react'
 import { IssuesContext } from '../../context/IssuesContext'
 import Markdown from 'react-markdown'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import style from 'react-syntax-highlighter/dist/esm/styles/prism/dracula'
-// Defina o estilo diretamente como um objeto CSSProperties
-const customStyle: CSSProperties = {
-  backgroundColor: '#282a36',
-  color: '#f8f8f2',
-}
+
 export function Posts() {
   const { postId } = useParams()
   const { issues } = useContext(IssuesContext)
