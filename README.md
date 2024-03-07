@@ -1,30 +1,34 @@
-# React + TypeScript + Vite
+# GitHub Blog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto desenvolvido como parte da trilha de ReactJS do IGNITE, pela Rocketseat. O GitHub Blog é um sistema de busca e exibição de issues utilizando a [GitHub Users API](https://docs.github.com/pt/rest/users/users#get-a-user) e a [GitHub Search API](https://docs.github.com/pt/rest/search).
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **ReactJS**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **React Router DOM**: Para gerenciamento de rotas na aplicação.
+- **Tailwind CSS**: Uma estrutura de estilo utilitário altamente configurável para estilização rápida e eficiente.
+- **React Markdown**: Para renderização de conteúdo Markdown.
+- **React Syntax Highlighter**: Para realce de sintaxe em blocos de código.
+- **date-fns**: Para formatação de datas.
+- **Axios**: Para fazer requisições HTTP para a API do GitHub.
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Pesquisa de Usuário**: Permite buscar usuários do GitHub pelo nome.
+- **Exibição de Perfil**: Mostra informações detalhadas sobre o perfil do usuário, como avatar, nome, bio e número de seguidores.
+- **Listagem de Issues**: Exibe as issues relacionadas ao repositório do usuário pesquisado.
+- **Detalhes da Issue**: Permite visualizar detalhes de uma issue específica, incluindo título, corpo, data de criação e status.
+- **Renderização de Conteúdo Markdown**: Suporte para renderizar conteúdo Markdown diretamente na aplicação.
+- **Realce de Sintaxe**: Destaca a sintaxe de blocos de código dentro das issues.
 
-- Configure the top-level `parserOptions` property like this:
+### Blog
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Nesta página, você encontrará a lista de issues do próprio repositório, exibindo seus títulos, datas de criação e uma breve descrição.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+![GitHub Blog - Página Inicial](https://github.com/Guivieirasilva/github-blog/assets/95317866/e6fd84d9-0057-4271-b3b3-998f24dce122)
+
+### Post
+
+Aqui, você terá acesso aos detalhes de uma issue específica, incluindo seu conteúdo formatado.
+
+![GitHub Blog - Detalhes da Issue](https://github.com/Guivieirasilva/github-blog/assets/95317866/51d9e3e5-117f-421e-bf60-768201456428)
