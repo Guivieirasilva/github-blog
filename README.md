@@ -21,6 +21,8 @@ Este é um projeto desenvolvido como parte da trilha de ReactJS do IGNITE, pela 
 - **Renderização de Conteúdo Markdown**: Suporte para renderizar conteúdo Markdown diretamente na aplicação.
 - **Realce de Sintaxe**: Destaca a sintaxe de blocos de código dentro das issues.
 
+## Páginas
+
 ### Blog
 
 Nesta página, você encontrará a lista de issues do próprio repositório, exibindo seus títulos, datas de criação e uma breve descrição.
